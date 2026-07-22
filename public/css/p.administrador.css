@@ -1,0 +1,341 @@
+/* Paleta monocromática morado */
+:root {
+  --velora-morado: #6d3bd6;
+  --velora-morado-claro: #8c5cf7;
+  --velora-morado-muy-claro: #e3d6fa;
+  --velora-blanco: #fff;
+  --velora-gris: #888;
+  --velora-fondo: #f3f3f3;
+  --velora-morado-nav: #622c69;
+}
+
+/* Fondo general */
+body {
+  background: var(--velora-fondo);
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar-custom {
+  background: var(--velora-morado-nav);
+  color: var(--velora-blanco);
+  box-shadow: 0 2px 8px #622c6933;
+  min-height: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+}
+.navbar-brand {
+  color: var(--velora-blanco) !important;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.icons-navbar a {
+  color: var(--velora-blanco);
+  font-size: 1.5rem;
+  margin-left: 18px;
+  transition: color 0.2s;
+}
+.icons-navbar a:hover {
+  color: var(--velora-morado-claro);
+}
+
+/* Contenedor principal */
+.container-admin {
+  background: var(--velora-blanco);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #6d3bd622;
+  padding: 32px 24px;
+  margin: 32px auto;
+  max-width: 1200px;
+}
+
+/* Títulos principales */
+h2,
+.titulo-productos,
+.titulo-usuarios {
+  color: var(--velora-morado-nav);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Tablas */
+.table {
+  background: #f3f3f3;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px #6d3bd633;
+}
+.table th, .table td {
+  vertical-align: middle !important;
+  font-size: 1rem;
+  color: #622c69 !important;
+  background: #f3f3f3 !important;
+  border-color: #622c69 !important;
+}
+.table th {
+  border-bottom: 2px solid #622c69 !important;
+  border-top: 2px solid #622c69 !important;
+}
+.table-primary {
+  background: #f3f3f3 !important;
+  color: #622c69 !important;
+  font-weight: 600;
+}
+.table-hover tbody tr:hover {
+  background: #f3f3f3 !important;
+}
+.promocion {
+  background: var(--velora-morado-muy-claro) !important;
+}
+
+/* Botones */
+.btn-blue, .btn-primary, .btn-danger {
+  background: var(--velora-morado-nav);
+  color: var(--velora-blanco) !important;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 24px;
+  transition: background 0.2s;
+}
+.btn-blue:hover, .btn-primary:hover, .btn-danger:hover,
+.btn-aplicar-descuento:hover {
+  background: #491d4f !important;
+  color: #fff !important;
+}
+
+/* Forzar color morado en el botón aplicar descuento, aunque tenga bg-success */
+button.btn-aplicar-descuento.bg-success,
+.btn.bg-success.btn-aplicar-descuento,
+.btn-aplicar-descuento.bg-success,
+.btn-aplicar-descuento.bg-success:focus,
+.btn-aplicar-descuento.bg-success:active,
+.btn-aplicar-descuento,
+.btn-aplicar-descuento:focus,
+.btn-aplicar-descuento:active,
+.bg-success.btn-aplicar-descuento,
+.bg-success.btn-aplicar-descuento:focus,
+.bg-success.btn-aplicar-descuento:active {
+  background: #622c69 !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Modales */
+.modal-content {
+  border-radius: 16px;
+  background: #f3f3f3;
+  border: none !important;
+  box-shadow: 0 4px 24px #6d3bd622;
+}
+.modal-header {
+  background: #622c69;
+  color: #fff;
+  border-bottom: 1px solid #622c69;
+  border-radius: 16px 16px 0 0;
+  justify-content: center;
+  text-align: center;
+}
+.modal-title {
+  font-weight: bold;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+.btn-close {
+  color: var(--velora-morado-nav);
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+}
+
+/* Centrar ubicaciones dentro del modal */
+.modal-body .form-group,
+.modal-body .row,
+.modal-body label,
+.modal-body select,
+.modal-body input {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* Inputs y selects */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid var(--velora-morado-claro);
+  background: var(--velora-blanco);
+  color: var(--velora-morado-nav);
+  font-size: 1rem;
+}
+.form-label {
+  color: var(--velora-morado-nav);
+  font-weight: 500;
+}
+
+/* Precios y descuentos */
+.text-decoration-line-through {
+  text-decoration: line-through;
+  color: var(--velora-gris);
+  font-size: 1em;
+}
+.fw-bold.ms-2.text-success {
+  color: #622c69 !important;
+}
+.badge.bg-success {
+  margin-left: 8px;
+  font-size: 0.95em;
+  background: #622c69 !important;
+  color: #fff !important;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  border: none;
+}
+
+/* Centrar modales */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+/* Mensajes y textos secundarios */
+.text-muted {
+  color: var(--velora-gris) !important;
+}
+
+/* Ajusta el ancho de la columna Ubicación en tablas responsivas */
+@media (max-width: 900px) {
+  .table th:nth-child(5),
+  .table td:nth-child(5) {
+    min-width: 80px;
+    max-width: 100px;
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .container-admin {
+    padding: 16px 4px;
+    margin: 16px auto;
+  }
+  .table th, .table td {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 600px) {
+  .container-admin {
+    padding: 8px 0;
+    margin: 8px auto;
+  }
+  .badge.bg-success {
+    font-size: 0.80em;
+    padding: 3px 7px;
+  }
+}
+
+/* Centrar las opciones de Nuevos, Notables y Productos dentro del modal */
+.modal-body .filtros-productos,
+.modal-body .filtros-productos .btn-group {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+/* Quita el contorno de los inputs en los modales */
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  background: #fff;
+  color: var(--velora-morado-nav);
+}
+
+/* Centra los botones de los modales (Cancelar y Guardar) */
+.modal-footer {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 16px;
+}
+
+/* Opcional: ajusta el espacio entre botones si es necesario */
+.modal-footer .btn {
+  margin: 0 6px;
+}
+
+/* Centrar los recuadros de ubicación en el modal de editar producto */
+#modalEditarProducto .modal-body .mb-3 .form-check-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+/* Centrar el grupo completo de checkboxes */
+#modalEditarProducto .modal-body .mb-3:last-of-type,
+#modalEditarProducto .modal-body .mb-3 .form-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Cambiar el color de relleno de los checkboxes a #622c69 */
+#modalEditarProducto .form-check-input[type="checkbox"] {
+  accent-color: #622c69;
+  /* Para navegadores que no soportan accent-color: */
+  background-color: #fff;
+  border: 2px solid #622c69;
+}
+#modalEditarProducto .form-check-input[type="checkbox"]:checked {
+  background-color: #622c69;
+  border-color: #622c69;
+}
+
+/* Centrar y mostrar los checkboxes de ubicación en línea horizontal en el modal editar producto */
+#modalEditarProducto .modal-body .mb-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+/* Mostrar cada checkbox y su label en línea */
+#modalEditarProducto .form-check {
+  display: flex !important;
+  align-items: center;
+  margin-bottom: 0;
+  margin-right: 16px;
+}
+
+/* Opcional: ajusta el espacio entre los checkboxes */
+#modalEditarProducto .form-check:last-child {
+  margin-right: 0;
+}
+
+/* Mostrar los recuadros de Nuevos, Notables y Producto en línea horizontal en el modal editar producto */
+#modalEditarProducto .filtros-productos {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+/* Opcional: ajusta el espacio entre los botones o recuadros */
+#modalEditarProducto .filtros-productos .btn,
+#modalEditarProducto .filtros-productos .form-check {
+  margin-right: 0;
+}

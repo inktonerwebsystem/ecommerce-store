@@ -1,0 +1,76 @@
+/* 🎨 Navbar personalizado para todas las pestañas */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcfaf0; /* blanco-lino */
+  padding: 10px 40px;
+  border-bottom: 1px solid #cfcfd9; /* gris-lavanda */
+  margin-bottom: 30px;
+}
+
+.inicio-link {
+  color: #622C69;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  color: #622C69;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  /* Sin hover */
+}
+
+.menu li a:hover,
+.menu li a:focus,
+.inicio-link:hover,
+.inicio-link:focus {
+  color: #622C69;
+  /* Sin efecto hover */
+}
+
+.iconos {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.iconos a {
+  display: flex;
+  align-items: center;
+  color: #622C69;
+  text-decoration: none;
+  /* Sin hover */
+}
+
+.iconos a:hover,
+.iconos a:focus {
+  color: #622C69;
+}
+
+.iconos img,
+.iconos svg {
+  width: 24px;
+  height: 24px;
+  /* Para SVG monocromo: */
+  fill: #622C69;
+  /* Si usas PNG, asegúrate que ya sea de */
+}

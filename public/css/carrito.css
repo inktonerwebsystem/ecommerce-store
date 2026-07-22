@@ -1,0 +1,121 @@
+.offcanvas-carrito {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 420px;
+  max-width: 100vw;
+  height: 100vh;
+  background: #fcf8ed;
+  box-shadow: -2px 0 16px #0002;
+  z-index: 9999;
+  transition: right 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.offcanvas-carrito.abierto {
+  right: 0;
+}
+.offcanvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 28px 0 28px;
+  font-size: 2rem;
+  color: #6d3b6d;
+  font-weight: bold;
+}
+.offcanvas-title {
+  font-size: 2rem;
+}
+.offcanvas-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #6d3b6d;
+  cursor: pointer;
+}
+.offcanvas-envio {
+  background: #d6b6e6;
+  color: #6d3b6d;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.offcanvas-body {
+  padding: 28px;
+  flex: 1;
+  overflow-y: auto;
+}
+.carrito-vacio {
+  text-align: center;
+  color: #6d3b6d;
+  font-size: 1.2rem;
+  margin-bottom: 32px;
+}
+.btn-comprar {
+  background: #d6b6e6;
+  color: #fff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-top: 18px;
+  cursor: pointer;
+}
+.carrito-sugerencias h4 {
+  color: #6d3b6d;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.sugerencia-producto {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 8px #0001;
+  margin-bottom: 10px;
+}
+.sugerencia-producto img {
+  width: 70px;
+  border-radius: 8px;
+}
+.sugerencia-producto span {
+  display: block;
+  color: #6d3b6d;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.sugerencia-estrellas {
+  color: #f7e06c;
+  font-size: 1.1rem;
+  margin: 4px 0;
+}
+.sugerencia-precio {
+  color: #6d3b6d;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 6px 0;
+}
+.btn-agregar {
+  background: #d6b6e6;
+  color: #fff;
+  border: none;
+  padding: 6px 18px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+@media (max-width: 600px) {
+  .offcanvas-carrito {
+    width: 100vw;
+    padding: 0;
+  }
+  .offcanvas-header, .offcanvas-body {
+    padding: 18px;
+  }
+}

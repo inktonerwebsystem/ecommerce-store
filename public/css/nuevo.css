@@ -1,0 +1,558 @@
+/* 🎨 Variables de color y fuente */
+:root {
+  --lavanda-suave: #caa8db;
+  --blanco-lino: #fcfaf0;
+  --dorado-calido: #d4bfaa;
+  --gris-lavanda: #cfcfd9;
+  --gris-oscuro: #1F1F1F;
+  --fuente-principal: 'Segoe UI', sans-serif;
+}
+
+/* 🔄 Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--blanco-lino);
+  color: #333;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cambia el color del subrayado de los enlaces a morado */
+a {
+  text-decoration-color: #622c69 !important;
+}
+
+/* 🏷️ Logo principal */
+.logo {
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  margin: 20px 0;
+  color: var(--lavanda-suave);
+  font-family: var(--fuente-principal);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* 🧭 Navbar */
+.navbar {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  align-items: center;
+  padding: 0;
+}
+
+.navbar .menu li a {
+  color: #6d3b6d;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar .menu li a:hover,
+.navbar .menu li a:focus,
+.navbar .menu li a.active {
+  color: #b97cb7;
+  text-decoration: underline;
+}
+
+.navbar .iconos {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .iconos img {
+  width: 22px;
+  height: 22px;
+  filter: grayscale(0%);
+  transition: filter 0.2s;
+}
+
+.navbar .iconos img:hover {
+  filter: brightness(0.7);
+}
+
+/* 📦 Contenedor de productos */
+.productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: flex-start;
+  background: #fdfbee;
+  padding: 40px 0 0 0;
+}
+
+/* 🧼 Producto individual */
+.producto-item {
+  width: 240px;
+  min-height: 340px;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.producto-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.producto-item h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  color: #6d3b6d;
+  font-weight: 600;
+  margin: 18px 0 10px 0;
+  text-align: center;
+}
+
+/* ⭐ Estrellas y reseñas */
+.estrellas {
+  font-size: 1.2rem;
+  color: gold;
+  margin-top: 5px;
+}
+
+.reviews {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.estrellas-resenas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.estrellas {
+  color: #f7e06c;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.cantidad-resenas {
+  color: #6d3b6d;
+  font-size: 13px;
+  margin-top: 2px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  white-space: nowrap;
+}
+
+.sin-stock {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background: #6d3b6d;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* 🔘 Botón Ver Más */
+.ver-mas {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: var(--lavanda-suave);
+  color: var(--blanco-lino);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.ver-mas:hover {
+  background-color: var(--dorado-calido);
+}
+
+/* Estilos solo para la sección de productos "Nuevos" */
+.mas-vendidos {
+  text-align: center;
+  margin: 40px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mas-vendidos h2 {
+  font-size: 2.2rem;
+  color: #622C69;
+  margin-bottom: 28px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.producto-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(98,44,105,0.08);
+  padding: 18px 12px 16px 12px;
+  width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.producto-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #f3eaf7;
+}
+
+.producto-item h3 {
+  font-size: 1.1rem;
+  color: #622C69;
+  margin: 8px 0 4px 0;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.estrellas {
+  margin: 4px 0;
+  color: #f7c948;
+  font-size: 1.1rem;
+}
+
+/* Imagen más grande y destacada */
+.img-producto-destacada {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 10px auto;
+  background: transparent;
+  box-shadow: 0 4px 18px #6d3bd622;
+  border-radius: 18px;
+}
+
+/* Nombre del producto centrado */
+.nombre-producto {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 20px;
+  color: #6d3b6d;
+  font-weight: 600;
+  margin: 28px 0 10px 0;
+  text-align: center;
+}
+
+/* Fila de reseñas: estrellas a la izquierda, cantidad a la derecha */
+.fila-resenas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.estrellas-promedio {
+  color: #f7e06c;
+  font-size: 20px;
+  display: flex;
+}
+
+.cantidad-resenas {
+  color: #6d3b6d;
+  font-size: 13px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  white-space: nowrap;
+}
+
+/* --- ESTILOS SOLO PARA DETALLE DE PRODUCTO --- */
+.detalle-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: #fcfaf0;
+  padding: 40px 24px;
+  border-radius: 24px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.detalle-img {
+  flex: 0 0 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.detalle-img img {
+  width: 90%;
+  max-width: 300px;
+  object-fit: contain;
+  border-radius: 24px;
+}
+
+.detalle-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 18px;
+}
+
+.detalle-info h2 {
+  font-size: 2.6rem;
+  color: #7a3b8c;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.seccion-resenas {
+  margin-bottom: 18px;
+}
+
+.descripcion {
+  font-size: 1.25rem;
+  color: #222;
+  margin: 24px 0 32px 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+.btn-agregar-carrito, .btn-comprar {
+  background: #caa8db;
+  color: #fff;
+  font-size: 1.25rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  padding: 18px 48px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-agregar-carrito:hover, .btn-comprar:hover {
+  background: #b97cb7;
+}
+
+/* --- ESTILOS PARA SUGERENCIAS DE PRODUCTO --- */
+/* Estilos para sugerencias de producto */
+.sugerencia-producto {
+  background: #e9d6ee; /* Morado suave */
+  color: #6d3b6d;
+  border-radius: 18px;
+  padding: 18px 22px;
+  min-width: 260px;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  margin-bottom: 18px;
+}
+
+.sombra-negra {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.sugerencia-producto img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px;
+}
+
+.sugerencia-estrellas {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.sugerencia-estrellas .fa-star,
+.sugerencia-estrellas .fa-star-o {
+  color: #b97cb7;
+  font-size: 1rem;
+}
+
+.sugerencia-precio {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #6d3b6d;
+  margin-bottom: 6px;
+}
+
+.btn-agregar {
+  background: #b97cb7;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.btn-agregar:hover {
+  background: #6d3b6d;
+  color: #fff;
+}
+/* --- FIN ESTILOS PARA SUGERENCIAS DE PRODUCTO --- */
+@media (max-width: 1200px) {
+  .detalle-container {
+    gap: 40px;
+    padding: 32px 10px;
+    max-width: 98vw;
+  }
+  .detalle-img {
+    min-width: 340px;
+    max-width: 340px;
+    min-height: 340px;
+    max-height: 340px;
+  }
+  .detalle-img img {
+    max-width: 320px;
+    max-height: 320px;
+  }
+  .detalle-info {
+    min-width: unset;
+  }
+  .descripcion {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 900px) {
+  
+    .detalle-producto, .card.detalle-producto {
+    background: #FAF0E6 !important;
+    /* Si quieres el texto oscuro para contraste: */
+    color: #f27de8 !important;
+    background: #fcfaf0 !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 24px 5vw;
+  }
+  .detalle-img {
+    margin-bottom: 20px;
+  }
+  .detalle-info {
+    align-items: center;
+    text-align: center;
+  }
+}
+/* --- FIN ESTILOS DETALLE DE PRODUCTO --- */
+
+/* Zoom y lupa para imágenes de productos */
+.zoom-img-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;      /* Puedes aumentar este valor si quieres más espacio */
+  height: 320px;     /* Igual que arriba */
+  overflow: hidden;
+  cursor: zoom-in;
+  background:#fcfaf0 !important;
+  border-radius: 24px;
+}
+
+.lupa-icon {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 70%;
+  padding: 8px;
+  font-size: 1.3rem;
+  color: #b97cb7;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: opacity 0.2s;
+}
+
+.zoom-img-container:hover .lupa-icon {
+  opacity: 0.2;
+}
+
+/* Efecto de zoom al pasar el mouse */
+.zoom-img-container .zoom-img {
+  transition: transform 0.3s;
+}
+
+.zoom-img-container:hover .zoom-img {
+  transform: scale(2.1);
+  z-index: 2;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}

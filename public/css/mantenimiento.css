@@ -1,0 +1,44 @@
+/* ======= ESTILOS PARA SECCIÓN DE MANTENIMIENTO EN TIENDAS ======= */
+.mantenimiento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 40px 20px;
+  color: #622C69;
+}
+
+.mantenimiento img {
+  max-width: 340px;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.mantenimiento h2,
+.mantenimiento p,
+.mantenimiento a {
+  color: #622C69;
+}
+
+.volver-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: var(--lavanda-suave);
+  color: #fff !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: none;
+  display: inline-block;
+}
+
+.volver-btn:hover,
+.volver-btn:focus {
+  background-color: #622C69;
+  color: #fff !important;
+}
